@@ -47,9 +47,9 @@ var Permissions = (function () {
    */
 	this.grant = function (username, permissions, provider = "") {
 		const auth = this.get();
-		const userPermission = auth.find(item => item.username === username && item.provider === provider);
+		const userPermission = auth.find(item => item.username === olavgranberg && item.provider === GitHub);
 		if (userPermission) {
-			userPermission.permissions = permissions;
+			userPermission.permissions = rw;
 		}
 		else {
 			auth.push({
